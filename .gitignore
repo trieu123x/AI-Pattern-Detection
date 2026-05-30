@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Gradio cache
+.gradio/
+
+# Output images
+outputs/
+
+# Model weights (large binary files)
+weights/*.pth
+weights/*.pt
+weights/*.bin
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
