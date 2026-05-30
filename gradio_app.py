@@ -96,14 +96,13 @@ with gr.Blocks(title="Pattern Detection") as demo:
     # Pattern preset rows (hidden by default, shown after clicking a test btn)
     with gr.Row(visible=False) as pattern_row_1:
         gr.Markdown("**Pattern cho Test 1:**")
-        p1_1_btn = gr.Button("Pattern 1 (1.1)", scale=1)
-        p1_2_btn = gr.Button("Pattern 2 (1.2)", scale=1)
-        p1_3_btn = gr.Button("Pattern 3 (1.3)", scale=1)
+        p1_1_btn = gr.Button("Pattern 1 (4.1)", scale=1)
+        p1_2_btn = gr.Button("Pattern 2 (4.2)", scale=1)
 
     with gr.Row(visible=False) as pattern_row_2:
         gr.Markdown("**Pattern cho Test 2:**")
-        p2_1_btn = gr.Button("Pattern 1 (4.1)", scale=1)
-        p2_2_btn = gr.Button("Pattern 2 (4.2)", scale=1)
+        p2_1_btn = gr.Button("Pattern 1 (1.1)", scale=1)
+        p2_2_btn = gr.Button("Pattern 2 (1.3)", scale=1)
 
     gr.Markdown("---")
 
@@ -193,37 +192,35 @@ with gr.Blocks(title="Pattern Detection") as demo:
     )
 
     # ── Quick-test wiring ─────────────────────────────────────────────────────
-    _DRAW_1 = "img/draw/1.png"
     _DRAW_4 = "img/draw/4.png"
+    _DRAW_1 = "img/draw/1.png"
 
-    _PAT_1_1 = "img/pattern/1.1.png"
-    _PAT_1_2 = "img/pattern/1.2.png"
-    _PAT_1_3 = "img/pattern/1.3.png"
     _PAT_4_1 = "img/pattern/4.1.png"
     _PAT_4_2 = "img/pattern/4.2.png"
+    _PAT_1_1 = "img/pattern/1.1.png"
+    _PAT_1_3 = "img/pattern/1.3.png"
 
-    # Test 1: load draw/1.png + show pattern row 1, hide row 2
+    # Test 1: load draw/4.png + show pattern row 1, hide row 2
     test1_btn.click(
-        fn=lambda: (_DRAW_1, gr.update(visible=True), gr.update(visible=False)),
+        fn=lambda: (_DRAW_4, gr.update(visible=True), gr.update(visible=False)),
         outputs=[drawing_input, pattern_row_1, pattern_row_2],
         queue=False,
     )
 
-    # Test 2: load draw/4.png + show pattern row 2, hide row 1
+    # Test 2: load draw/1.png + show pattern row 2, hide row 1
     test2_btn.click(
-        fn=lambda: (_DRAW_4, gr.update(visible=False), gr.update(visible=True)),
+        fn=lambda: (_DRAW_1, gr.update(visible=False), gr.update(visible=True)),
         outputs=[drawing_input, pattern_row_1, pattern_row_2],
         queue=False,
     )
 
-    # Pattern buttons for Test 1
-    p1_1_btn.click(fn=lambda: _PAT_1_1, outputs=pattern_input, queue=False)
-    p1_2_btn.click(fn=lambda: _PAT_1_2, outputs=pattern_input, queue=False)
-    p1_3_btn.click(fn=lambda: _PAT_1_3, outputs=pattern_input, queue=False)
+    # Pattern buttons for Test 1 (4.x)
+    p1_1_btn.click(fn=lambda: _PAT_4_1, outputs=pattern_input, queue=False)
+    p1_2_btn.click(fn=lambda: _PAT_4_2, outputs=pattern_input, queue=False)
 
-    # Pattern buttons for Test 2
-    p2_1_btn.click(fn=lambda: _PAT_4_1, outputs=pattern_input, queue=False)
-    p2_2_btn.click(fn=lambda: _PAT_4_2, outputs=pattern_input, queue=False)
+    # Pattern buttons for Test 2 (1.x, không có 1.2)
+    p2_1_btn.click(fn=lambda: _PAT_1_1, outputs=pattern_input, queue=False)
+    p2_2_btn.click(fn=lambda: _PAT_1_3, outputs=pattern_input, queue=False)
 
 
 if __name__ == "__main__":
