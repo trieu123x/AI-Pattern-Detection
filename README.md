@@ -4,7 +4,7 @@ emoji: 🔍
 colorFrom: blue
 colorTo: indigo
 sdk: gradio
-sdk_version: "4.44.0"
+sdk_version: "5.29.0"
 app_file: app.py
 pinned: false
 license: mit
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 ## Chạy Ứng Dụng
 
 ```bash
-python gradio_app.py
+python app.py
 ```
 
 Mở browser tại `http://localhost:7860` và:
