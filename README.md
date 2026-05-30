@@ -1,3 +1,15 @@
+---
+title: AI Pattern Detection
+emoji: 🔍
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: "4.44.0"
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # AI Pattern Detection
 
 Hệ thống phát hiện ký hiệu kỹ thuật trong bản vẽ kỹ thuật số, hỗ trợ **xoay đa góc** và **thay đổi kích thước** tự động — không cần dữ liệu huấn luyện, chỉ cần 1 ảnh mẫu.
