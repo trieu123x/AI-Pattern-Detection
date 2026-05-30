@@ -149,6 +149,8 @@ Drawing Image ──► preprocess_image() ──► match_pattern()
 
 ## Ví Dụ Kết Quả
 
+![alt text](image.webp)
+
 ```json
 {
   "total_detections": 3,
