@@ -149,15 +149,17 @@ Drawing Image ──► preprocess_image() ──► match_pattern()
 
 ## Ví Dụ Kết Quả
 
-![alt text](image.webp)
+![alt text](image2.webp)
 
 ```json
 {
-  "total_detections": 3,
+  "total_detections": 5,
   "boxes": [
-    {"bbox": [142, 305, 48, 32], "score": 0.8821, "angle": 0.0,   "scale": 1.0},
-    {"bbox": [380, 210, 48, 32], "score": 0.8614, "angle": 0.0,   "scale": 1.1},
-    {"bbox": [560, 410, 32, 48], "score": 0.8102, "angle": 90.0,  "scale": 1.0}
+    {"bbox": [740, 896, 43, 44], "score": 0.8730, "angle": 180.0, "scale": 1.1},
+    {"bbox": [312, 450, 43, 44], "score": 0.7407, "angle": 0.0,   "scale": 1.2},
+    {"bbox": [528, 672, 43, 44], "score": 0.7393, "angle": 0.0,   "scale": 1.2},
+    {"bbox": [196, 238, 43, 44], "score": 0.7137, "angle": 0.0,   "scale": 1.2},
+    {"bbox": [864, 320, 44, 43], "score": 0.6561, "angle": 90.0,  "scale": 1.3}
   ]
 }
 ```
